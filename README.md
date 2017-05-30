@@ -1,4 +1,4 @@
-# Game starter
+# HTML5 Game starter pack
 
 ## Commands
 
@@ -28,7 +28,7 @@ To start new project, clone this repo without history
 
     [name] = name of your game
     
-```git clone git@github.com:EntityB/game-starter.git --depth 1 [name]```
+```git clone git@github.com:EntityB/html5-game-starter-pack.git --depth 1 [name]```
 
 Then install dependencies
 
