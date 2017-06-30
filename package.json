@@ -1,27 +1,33 @@
 {
   "name": "html5-game-starter-pack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "b:dev": "webpack --env=dev --config config/webpack.config.js --progress --profile --colors",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "b:dist": "webpack --env=prod --config config/webpack.config.js --progress --profile --colors",
-    "watch": "webpack --env=dev --config config/webpack.config.js --progress --profile --colors --watch",
-    "server": "node ./run-server.js",
-    "dev": "start npm run watch && start npm run server"
+    "watch": "webpack --env=prod --config config/webpack.config.js --progress --profile --colors --watch",
+    "server": "node ./index.js",
+    "start": "start npm run watch && start npm run server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EntityB/game-starter.git"
+    "url": "git+https://github.com/EntityB/html5-game-starter-pack.git"
   },
-  "author": "Entity Black",
+  "author": "Entity Black <entityblack@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EntityB/game-starter/issues"
+    "url": "https://github.com/EntityB/html5-game-starter-pack/issues"
   },
-  "homepage": "https://github.com/EntityB/game-starter#readme",
+  "homepage": "https://github.com/EntityB/html5-game-starter-pack#readme",
   "dependencies": {
-    "webpack": "^2.6.1",
     "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "chronos-pattern": "^1.0.2",
+    "webpack": "^2.6.1"
   }
 }

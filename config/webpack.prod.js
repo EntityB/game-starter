@@ -2,9 +2,24 @@ var path = require('path'),
     webpack = require('webpack');
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
+    devtool: '#source-map',
 
     entry: './src/index.js',
+
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }
+            }
+        ]
+    },
 
     output: {
         path: path.resolve(__dirname, '../dist'),
