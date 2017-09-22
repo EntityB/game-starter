@@ -1,3 +1,5 @@
+import { gamee } from 'gamee-js'
+
 var GameeConnector = function (Game) {
     this.sound = false;
     this.controller = null;
@@ -26,7 +28,7 @@ GameeConnector.prototype = {
         // in this phase, your game notifies platform what kind of controller it uses and what capabilities it has
         gamee.gameInit(controllerType, controllerOpts, capabilities, this._initGameCb.bind(this));
     },
-    _initGameCb: function (data) {
+    _initGameCb: function (error, data) {
         // callback for gameInit
         // response for gameInit contains requested controller instance, some other data based on capabilities and sound otpion
         this.controller = data.controller;

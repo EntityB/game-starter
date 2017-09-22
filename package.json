@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "b:dev": "webpack --env=dev --config config/webpack.config.js --progress --profile --colors",
     "b:dist": "webpack --env=prod --config config/webpack.config.js --progress --profile --colors",
-    "watch": "webpack --env=dev --config config/webpack.config.js --progress --profile --colors --watch",
+    "watch": "webpack --env=prod --config config/webpack.config.js --progress --profile --colors --watch",
     "server": "node ./run-server.js",
-    "dev": "start npm run watch && start npm run server"
+    "dev": "(start npm run watch && start npm run server) || (npm run watch & npm run server)",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,14 @@
     "url": "https://github.com/EntityB/game-starter/issues"
   },
   "homepage": "https://github.com/EntityB/game-starter#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.6.0"
+  },
   "dependencies": {
-    "webpack": "^2.6.1",
-    "express": "^4.15.3"
+    "express": "^4.15.4",
+    "gamee-js": "^2.0.5"
   }
 }
